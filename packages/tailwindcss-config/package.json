@@ -1,0 +1,15 @@
+{
+  "name": "@doeverything/tailwindcss-config",
+  "version": "1.0.0",
+  "description": "doeverything — tailwindcss configuration",
+  "main": "tailwind.config.ts",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": false,
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@doeverything/tsconfig": "workspace:*"
+  }
+}

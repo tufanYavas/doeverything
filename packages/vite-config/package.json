@@ -1,0 +1,26 @@
+{
+  "name": "@doeverything/vite-config",
+  "version": "1.0.0",
+  "description": "doeverything — vite base configuration",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": true,
+  "types": "index.mts",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:bundle": "pnpx rimraf dist",
+    "clean": "pnpm clean:bundle && pnpm clean:node_modules",
+    "ready": "tsc -b"
+  },
+  "dependencies": {
+    "@doeverything/env": "workspace:*"
+  },
+  "devDependencies": {
+    "@doeverything/hmr": "workspace:*",
+    "@doeverything/tsconfig": "workspace:*",
+    "@vitejs/plugin-react-swc": "^3.9.0"
+  }
+}

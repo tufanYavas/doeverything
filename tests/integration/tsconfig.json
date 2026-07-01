@@ -1,0 +1,12 @@
+{
+  "extends": "@doeverything/tsconfig/base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "paths": {
+      "@doeverything/dom-processor": ["../../packages/dom-processor/lib/index.ts"]
+    }
+  },
+  "include": ["**/*.test.ts", "**/*.test.tsx"]
+}

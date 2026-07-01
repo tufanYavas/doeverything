@@ -1,0 +1,56 @@
+{
+  "name": "@doeverything/sidepanel",
+  "version": "1.0.0",
+  "description": "doeverything — side panel (chat UI)",
+  "type": "module",
+  "private": true,
+  "sideEffects": true,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:turbo": "rimraf .turbo",
+    "clean": "pnpm clean:turbo && pnpm clean:node_modules",
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@doeverything/i18n": "workspace:*",
+    "@doeverything/llm-providers": "workspace:*",
+    "@doeverything/shared": "workspace:*",
+    "@doeverything/storage": "workspace:*",
+    "@doeverything/ui": "workspace:*",
+    "@tanstack/react-query": "^5.62.0",
+    "@tiptap/core": "^2.10.0",
+    "@tiptap/extension-mention": "^2.10.0",
+    "@tiptap/extension-placeholder": "^2.10.0",
+    "@tiptap/react": "^2.10.0",
+    "@tiptap/starter-kit": "^2.10.0",
+    "@tiptap/suggestion": "^2.10.0",
+    "@uiw/react-json-view": "2.0.0-alpha.42",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^0.469.0",
+    "prism-react-renderer": "^2.4.1",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "uuid": "^11.0.5",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@doeverything/tailwindcss-config": "workspace:*",
+    "@doeverything/tsconfig": "workspace:*",
+    "@doeverything/vite-config": "workspace:*",
+    "@types/uuid": "^10.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

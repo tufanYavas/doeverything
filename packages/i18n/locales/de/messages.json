@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – KI-Browser-Agent: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — KI-Agent für Ihren Browser. Chatten im Seitenpanel; er navigiert, füllt Formulare und führt Werkzeuge aus."
+    },
+    "actionTitle": {
+        "message": "doeverything öffnen"
+    },
+    "commandToggleSidePanel": {
+        "message": "doeverything Seitenpanel umschalten"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

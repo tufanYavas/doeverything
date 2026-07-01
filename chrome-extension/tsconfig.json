@@ -1,0 +1,10 @@
+{
+  "extends": "@doeverything/tsconfig/app",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
+  },
+  "include": ["src", "utils", "scripts", "vite.config.mts", "manifest.ts", "../node_modules/@types"]
+}

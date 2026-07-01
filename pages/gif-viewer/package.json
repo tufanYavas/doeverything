@@ -1,0 +1,40 @@
+{
+  "name": "@doeverything/gif-viewer",
+  "version": "1.0.0",
+  "description": "doeverything — workflow GIF viewer",
+  "type": "module",
+  "private": true,
+  "sideEffects": true,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:turbo": "rimraf .turbo",
+    "clean": "pnpm clean:turbo && pnpm clean:node_modules",
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@doeverything/shared": "workspace:*",
+    "@doeverything/storage": "workspace:*",
+    "@doeverything/i18n": "workspace:*",
+    "@doeverything/ui": "workspace:*",
+    "lucide-react": "^0.469.0"
+  },
+  "devDependencies": {
+    "@doeverything/tailwindcss-config": "workspace:*",
+    "@doeverything/tsconfig": "workspace:*",
+    "@doeverything/vite-config": "workspace:*"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

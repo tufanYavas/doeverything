@@ -1,0 +1,10 @@
+{
+  "name": "@doeverything/integration-tests",
+  "version": "1.0.0",
+  "description": "React integration tests for dom-processor",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@doeverything/tsconfig": "workspace:*"
+  }
+}

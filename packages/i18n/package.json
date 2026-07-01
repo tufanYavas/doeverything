@@ -1,0 +1,31 @@
+{
+  "name": "@doeverything/i18n",
+  "version": "1.0.0",
+  "description": "doeverything — internationalization",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "main": "dist/index.mjs",
+  "types": "index.mts",
+  "scripts": {
+    "clean:bundle": "rimraf dist",
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:turbo": "rimraf .turbo",
+    "clean": "pnpm clean:bundle && pnpm clean:node_modules && pnpm clean:turbo",
+    "ready": "tsc -b prepare-build.tsconfig.json && node --env-file=../../.env dist/lib/prepare-build.js && tsc -b",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@doeverything/env": "workspace:*"
+  },
+  "devDependencies": {
+    "@doeverything/tsconfig": "workspace:*"
+  }
+}

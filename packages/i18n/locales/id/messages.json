@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – Agen Browser AI: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — agen AI untuk browser Anda. Mengobrol di panel samping; ia menjelajah, mengisi formulir, dan menjalankan alat."
+    },
+    "actionTitle": {
+        "message": "Buka doeverything"
+    },
+    "commandToggleSidePanel": {
+        "message": "Aktifkan/Nonaktifkan panel doeverything"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

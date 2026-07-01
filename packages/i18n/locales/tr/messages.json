@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – AI Tarayıcı Ajanı: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — tarayıcınızı kullanan bir AI ajanı. Yan panelden konuşun; gezinir, formları doldurur ve araçları çalıştırır."
+    },
+    "actionTitle": {
+        "message": "doeverything\u0027yı aç"
+    },
+    "commandToggleSidePanel": {
+        "message": "doeverything yan panelini aç/kapat"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

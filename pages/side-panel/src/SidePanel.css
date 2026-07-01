@@ -1,0 +1,29 @@
+/*
+ * Side panel-specific overrides. Most styling is delegated to the
+ * @doeverything/ui design tokens via Tailwind; this file only carries layout
+ * tweaks the panel needs (full-height host, scroll containment).
+ */
+
+html,
+body,
+#app-container {
+  height: 100%;
+  margin: 0;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+ * Cheap virtualization for chat rows: offscreen rows skip layout, paint,
+ * and image decode entirely. `contain-intrinsic-size` keeps scrollHeight
+ * approximately right so scroll pinning and the scrollbar stay sane.
+ * Applied to every row except the last (the streaming row must keep its
+ * real size or the bottom of the chat would shift while text grows).
+ */
+.de-msg-row {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 180px;
+}

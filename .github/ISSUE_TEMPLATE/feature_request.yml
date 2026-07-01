@@ -1,0 +1,41 @@
+name: Feature Request
+description: Suggest a new feature or improvement for doeverything
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make doeverything better? We'd love to hear it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this feature solve? What are you trying to do that you can't do today?
+      placeholder: "I'm trying to... but currently..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this to work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Are there other ways to solve the problem? Why is your proposed solution better?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Screenshots, mockups, or links that help illustrate the idea.
+    validations:
+      required: false

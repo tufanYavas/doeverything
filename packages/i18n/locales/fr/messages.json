@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – Agent IA pour navigateur: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — agent IA pour votre navigateur. Discutez dans le panneau; il navigue, remplit les formulaires et exécute des outils."
+    },
+    "actionTitle": {
+        "message": "Ouvrir doeverything"
+    },
+    "commandToggleSidePanel": {
+        "message": "Basculer le panneau latéral doeverything"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

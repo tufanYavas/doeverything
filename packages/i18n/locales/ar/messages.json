@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – وكيل متصفح ذكي: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — وكيل ذكاء اصطناعي يقود متصفحك. تحدث في اللوحة الجانبية؛ يتنقل، يملأ النماذج، ويشغّل الأدوات نيابةً عنك."
+    },
+    "actionTitle": {
+        "message": "افتح doeverything"
+    },
+    "commandToggleSidePanel": {
+        "message": "تبديل لوحة doeverything الجانبية"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

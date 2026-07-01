@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – AIブラウザエージェント: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — ブラウザを操作する AI エージェント。サイドパネルから話しかけるだけで、ナビゲート・スクレイプ・フォーム入力・ツール実行を代行します。"
+    },
+    "actionTitle": {
+        "message": "doeverything を開く"
+    },
+    "commandToggleSidePanel": {
+        "message": "doeverything サイドパネルを切替"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

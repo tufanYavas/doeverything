@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – AI浏览器智能体: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — 操作浏览器的 AI 智能体。在侧边栏对话,它会代你导航网页、抓取数据、填写表单并执行工具。"
+    },
+    "actionTitle": {
+        "message": "打开 doeverything"
+    },
+    "commandToggleSidePanel": {
+        "message": "切换 doeverything 侧边栏"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

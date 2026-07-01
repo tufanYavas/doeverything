@@ -1,0 +1,33 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – AI Browser Agent: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — an AI agent that drives your browser. Chat in the side panel; it navigates, fills forms, and runs tools for you."
+    },
+    "actionTitle": {
+        "description": "Toolbar tooltip",
+        "message": "Open doeverything"
+    },
+    "commandToggleSidePanel": {
+        "description": "Keyboard command description",
+        "message": "Toggle doeverything side panel"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

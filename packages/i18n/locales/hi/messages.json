@@ -1,0 +1,31 @@
+{
+    "extensionName": {
+        "description": "Extension name",
+        "message": "doeverything – AI ब्राउज़र एजेंट: Claude, GPT, Gemini, Grok & MCP"
+    },
+    "extensionDescription": {
+        "description": "Extension description",
+        "message": "doeverything — आपके ब्राउज़र को चलाने वाला AI एजेंट। साइड पैनल में चैट करें; यह नेविगेट करता है, फ़ॉर्म भरता है और टूल चलाता है।"
+    },
+    "actionTitle": {
+        "message": "doeverything खोलें"
+    },
+    "commandToggleSidePanel": {
+        "message": "doeverything साइड पैनल चालू/बंद"
+    },
+    "displayErrorInfo": {
+        "message": "Error occurred"
+    },
+    "displayErrorDescription": {
+        "message": "Sorry, something went wrong while loading the page."
+    },
+    "displayErrorReset": {
+        "message": "Run again"
+    },
+    "displayErrorDetailsInfo": {
+        "message": "Error details:"
+    },
+    "displayErrorUnknownErrorInfo": {
+        "message": "Unknown error"
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@doeverything/tsconfig",
+  "version": "1.0.0",
+  "description": "doeverything — tsconfig",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": false
+}

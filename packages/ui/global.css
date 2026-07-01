@@ -1,0 +1,278 @@
+/* Bundled variable fonts — no remote requests (extension CSP + offline). */
+@import '@fontsource-variable/hanken-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * doeverything design tokens — the "Kiln" palette.
+ *
+ * One saturated hue (the brand terracotta) over warm, kiln-fired neutrals:
+ * porcelain/bone in light mode, roasted espresso in dark mode. Every neutral
+ * carries a 20-30° warm cast so the whole product reads as one material —
+ * no generic blue-grey slate anywhere.
+ *
+ * All colors are raw HSL components so Tailwind can compose them with
+ * `<token> / <alpha>` and themes flip by swapping variables on `:root`.
+ */
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 24 22% 12%;
+
+    --muted: 32 22% 92%;
+    --muted-foreground: 26 10% 42%;
+
+    --popover: 36 40% 99%;
+    --popover-foreground: 24 22% 12%;
+
+    --card: 36 45% 99%;
+    --card-foreground: 24 22% 12%;
+
+    --border: 30 18% 87%;
+    --input: 30 16% 84%;
+
+    --primary: 16 64% 54%; /* terracotta — doeverything brand */
+    --primary-foreground: 36 45% 98%;
+
+    --secondary: 30 24% 92%;
+    --secondary-foreground: 24 22% 16%;
+
+    --accent: 22 36% 91%;
+    --accent-foreground: 20 40% 22%;
+
+    --destructive: 4 70% 48%;
+    --destructive-foreground: 36 45% 98%;
+
+    --success: 152 48% 36%;
+    --success-foreground: 36 45% 98%;
+
+    --warning: 36 92% 44%;
+    --warning-foreground: 24 22% 12%;
+
+    --ring: 16 64% 54%;
+
+    /* Shadow tint — warm umbra so elevation feels like the same material. */
+    --shadow: 24 35% 15%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 24 14% 8%;
+    --foreground: 33 24% 91%;
+
+    --muted: 24 11% 15%;
+    --muted-foreground: 29 9% 60%;
+
+    --popover: 24 13% 11%;
+    --popover-foreground: 33 24% 91%;
+
+    --card: 24 13% 10%;
+    --card-foreground: 33 24% 91%;
+
+    --border: 26 11% 19%;
+    --input: 26 11% 23%;
+
+    --primary: 17 72% 61%;
+    --primary-foreground: 24 30% 8%;
+
+    --secondary: 24 10% 16%;
+    --secondary-foreground: 33 24% 91%;
+
+    --accent: 22 14% 19%;
+    --accent-foreground: 32 30% 88%;
+
+    --destructive: 3 64% 54%;
+    --destructive-foreground: 33 24% 95%;
+
+    --success: 150 44% 46%;
+    --success-foreground: 24 30% 8%;
+
+    --warning: 38 90% 56%;
+    --warning-foreground: 24 30% 8%;
+
+    --ring: 17 72% 61%;
+
+    --shadow: 20 50% 2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:
+      'Hanken Grotesk Variable',
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      sans-serif;
+    font-feature-settings: 'ss03' on; /* single-storey g — softens the grotesk */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  code,
+  pre,
+  kbd {
+    font-family:
+      'JetBrains Mono Variable',
+      ui-monospace,
+      'SF Mono',
+      Menlo,
+      Consolas,
+      monospace;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.22);
+  }
+
+  /*
+   * Custom scrollbars — the default chrome ones look foreign inside a side
+   * panel. Thin, rounded, and invisible until hovered/scrolling, in the
+   * same warm neutral family as the rest of the surface.
+   */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.35) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.28);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+    background-clip: content-box;
+  }
+}
+
+/* doeverything-specific keyframes + atmosphere utilities. */
+@layer utilities {
+  /*
+   * Twinkle for the logomark's spark while the agent is busy. Scales about the
+   * spark's own center (`transform-box: fill-box`) so the ring stays put and
+   * only the core breathes.
+   */
+  @keyframes de-twinkle {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.55;
+      transform: scale(0.78) rotate(45deg);
+    }
+  }
+
+  .de-twinkle {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: de-twinkle 1.8s ease-in-out infinite;
+  }
+
+  /*
+   * Shimmer for the "Thinking… / Running …" label while the agent is busy.
+   * A bright terracotta band sweeps across muted text so the status reads as
+   * alive even when no new tokens are arriving — the fix for the panel
+   * looking frozen during long tool calls. Webkit needs both `background-clip:
+   * text` and a transparent text-fill to let the gradient show through glyphs.
+   */
+  @keyframes de-shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .de-shimmer {
+    background-image: linear-gradient(
+      90deg,
+      hsl(var(--muted-foreground)) 0%,
+      hsl(var(--muted-foreground)) 38%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--muted-foreground)) 62%,
+      hsl(var(--muted-foreground)) 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: de-shimmer 2.4s linear infinite;
+  }
+
+  /* Entrance for chat messages / staggered list reveals. */
+  @keyframes de-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .de-fade-up {
+    animation: de-fade-up 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) both;
+  }
+
+  /*
+   * Kiln glow — radial terracotta wash for hero surfaces (login, empty
+   * states). Sits behind content; pairs with .de-grain for texture.
+   */
+  .de-glow {
+    background:
+      radial-gradient(120% 90% at 50% -20%, hsl(var(--primary) / 0.14) 0%, transparent 60%),
+      radial-gradient(80% 60% at 85% 110%, hsl(var(--primary) / 0.07) 0%, transparent 55%);
+  }
+
+  /*
+   * Fine photographic grain (SVG feTurbulence, data URI — no asset needed).
+   * Keeps big soft gradients from banding and gives hero surfaces a paper
+   * feel. Use on an absolutely-positioned overlay with pointer-events-none.
+   */
+  .de-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.035;
+  }
+  .dark .de-grain {
+    opacity: 0.05;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .de-shimmer {
+      animation: none;
+      color: hsl(var(--muted-foreground));
+      -webkit-text-fill-color: hsl(var(--muted-foreground));
+    }
+    .de-twinkle {
+      animation: none;
+    }
+    .de-fade-up {
+      animation: none;
+    }
+  }
+}

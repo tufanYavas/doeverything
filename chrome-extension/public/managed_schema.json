@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "doeverything Managed Storage",
+  "description": "Enterprise-managed policies for doeverything. Administrators can deploy this schema via Chrome managed policies to enforce site-level restrictions.",
+  "type": "object",
+  "properties": {
+    "blockedUrlPatterns": {
+      "title": "Blocked URL Patterns",
+      "description": "List of URL patterns doeverything must refuse to navigate to. Patterns support `*` wildcards and match against hostname + path. The scheme (http/https) and `www.` prefix are stripped before matching; bare domains are interpreted as `<domain>/*`.",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

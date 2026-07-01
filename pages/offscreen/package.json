@@ -1,0 +1,29 @@
+{
+  "name": "@doeverything/offscreen",
+  "version": "1.0.0",
+  "description": "doeverything — offscreen document (keepalive, audio, GIF encoding)",
+  "type": "module",
+  "private": true,
+  "sideEffects": true,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:turbo": "rimraf .turbo",
+    "clean": "pnpm clean:turbo && pnpm clean:node_modules",
+    "build": "vite build",
+    "dev": "vite build --watch --mode development",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@doeverything/tsconfig": "workspace:*",
+    "@doeverything/vite-config": "workspace:*"
+  },
+  "dependencies": {
+    "gifenc": "^1.0.3"
+  }
+}

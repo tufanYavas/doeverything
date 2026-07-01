@@ -1,0 +1,12 @@
+{
+  "name": "@doeverything/vue-integration-tests",
+  "version": "1.0.0",
+  "description": "Vue integration tests for dom-processor",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@doeverything/tsconfig": "workspace:*",
+    "@testing-library/vue": "^8.1.0",
+    "vue": "^3.5.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@doeverything/llm-providers",
+  "version": "1.0.0",
+  "description": "doeverything — provider-agnostic LLM client built on the Vercel AI SDK",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "types": "index.mts",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "clean:bundle": "rimraf dist",
+    "clean:node_modules": "pnpx rimraf node_modules",
+    "clean:turbo": "rimraf .turbo",
+    "clean": "pnpm clean:bundle && pnpm clean:node_modules && pnpm clean:turbo",
+    "ready": "tsc -b",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit",
+    "postinstall": "pnpm ready"
+  },
+  "dependencies": {
+    "ai": "^6.0.0",
+    "@ai-sdk/anthropic": "^3.0.0",
+    "@ai-sdk/openai": "^3.0.0",
+    "@ai-sdk/openai-compatible": "^2.0.0",
+    "@ai-sdk/google": "^3.0.0",
+    "@ai-sdk/groq": "^3.0.0",
+    "@ai-sdk/mistral": "^3.0.0",
+    "@ai-sdk/xai": "^3.0.0",
+    "@ai-sdk/cerebras": "^2.0.0",
+    "@ai-sdk/togetherai": "^2.0.0",
+    "@openrouter/ai-sdk-provider": "^2.0.0"
+  },
+  "devDependencies": {
+    "@doeverything/env": "workspace:*",
+    "@doeverything/tsconfig": "workspace:*"
+  }
+}
