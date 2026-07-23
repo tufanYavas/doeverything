@@ -10,6 +10,8 @@
 ![](https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![](https://img.shields.io/badge/Manifest-V3-f59e0b?style=flat-square)
 
+**[Install from the Chrome Web Store →](https://chromewebstore.google.com/detail/caeifdbplgjpcjogmjabiacdbhdhehie)**
+
 <p align="center">
   <img src=".github/screenshot.png" alt="doeverything side panel" width="280" />
 </p>
@@ -44,7 +46,7 @@ There are three ways to use doeverything. Pick the one that fits your setup:
 
 The self-contained mode. doeverything runs its own agent loop — no external client needed.
 
-1. Install the extension and open the side panel.
+1. Install the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/caeifdbplgjpcjogmjabiacdbhdhehie) and open the side panel.
 2. Go to **Options → LLM**, pick a provider (Anthropic, OpenAI, Google, Groq, …), and paste your API key.
 3. Start chatting. The agent navigates, clicks, fills forms, and runs tasks on your behalf.
 
@@ -56,7 +58,7 @@ This mode gives you access to all features: persistent memory, scheduled tasks, 
 
 Connect claude.ai, ChatGPT, or any other web client to your browser via the cloud relay.
 
-1. Open the side panel and go to **Options → Connection → Generate MCP server URL**. The extension shows a personal URL like `https://relay.doeverythi.ng/mcp/abc123…`.
+1. Install the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/caeifdbplgjpcjogmjabiacdbhdhehie), open the side panel, and go to **Options → Connection → Generate MCP server URL**. The extension shows a personal URL like `https://relay.doeverythi.ng/mcp/abc123…`.
 2. Paste that URL into your AI client's MCP connector settings. The **Connection** tab has step-by-step guides for each supported client.
 
 ---

@@ -12,6 +12,8 @@ MCP Client ──stdio──▶ [mcp-bridge] ◀──WebSocket── Chrome Ext
 
 ## Quick start
 
+**Prerequisite:** the doeverything extension, installed from the [Chrome Web Store](https://chromewebstore.google.com/detail/caeifdbplgjpcjogmjabiacdbhdhehie).
+
 ### 1. Add to your MCP client config
 
 ```json
