@@ -26,7 +26,7 @@
     "@doeverything/storage": "workspace:*",
     "@doeverything/ui": "workspace:*",
     "@tanstack/react-query": "^5.62.0",
-    "@tiptap/core": "^2.10.0",
+    "@tiptap/core": "^3.30.4",
     "@tiptap/extension-mention": "^2.10.0",
     "@tiptap/extension-placeholder": "^2.10.0",
     "@tiptap/react": "^2.10.0",
