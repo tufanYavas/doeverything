@@ -7,7 +7,7 @@
   "devDependencies": {
     "@doeverything/tsconfig": "workspace:*",
     "@angular/common": "^21.0.0",
-    "@angular/compiler": "^21.0.0",
+    "@angular/compiler": "^21.2.20",
     "@angular/core": "^21.0.0",
     "@angular/platform-browser": "^21.0.0",
     "@angular/platform-browser-dynamic": "^21.0.0",
